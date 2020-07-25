@@ -1,2 +1,0 @@
-# widget-management
-widget management

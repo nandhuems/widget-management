@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Widget Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+  </head>
+  
+  <body ng-app="app">
+  
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">WIDGET MANAGEMENT</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- View -->
+    <div class="container container-main">
+      <ui-view></ui-view>
+    </div>
+
+    <!-- Library -->
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="lib/angular-ui-bootstrap.js"></script>
+
+     <!--  app Code -->
+     <script src="app.js"></script>
+     <script src="services/detail.js"></script>
+     <script src="components/details/detail.js"></script>
+     <script src="components/summary/summary.js"></script>
+     <script src="components/edit/createwidget.js"></script>
+     <script src="filter/numbertowords.js"></script>
+     <script src="directive/onlynumber.js"></script>
+     <script src="directive/alertmessage.js"></script>
+
+  </body> 
+</html>

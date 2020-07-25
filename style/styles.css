@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, helvetica, sans-serif;
+}
+
+.container-main {
+  padding: 15px;
+}
+
+.widget-main {
+  border: 2px solid #898989;
+  padding: 15px;
+  box-shadow: 2px 2px 24px #e0dede;
+}
+
+.borderwithText {
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  left: 40px;
+  background: #fff;
+  padding: 0px 5px;
+  margin: 0px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.table {
+  margin: 0px !important;
+  margin-top: 10px !important;
+}
+
+.table.editTable > tbody > tr > td {
+  border-top: 0px !important;
+}
+
+.table.editTable > tbody > tr > td.numberCol{
+  position: relative;
+    top: 0.7rem;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+  box-shadow: none;
+  outline: none !important;
+  outline-offset: 0px !important;
+}
+
+.addBtn {
+  font-size: 20px !important;
+  padding: 10px 5px !important;
+  line-height: 0 !important;
+}
+
+.minBtn {
+  font-size: 3rem !important;
+  line-height: 1px !important;
+  padding: 10px 5px !important;
+}
+
+.clsBtn {
+  position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+    font-size: 16px !important;
+    padding: 0px 5px !important;
+    line-height: 1.2 !important;
+}
+
+.mt-0 {
+  margin-top: 0px !important;
+}
+
+.formLabelText{
+  position: relative;
+  top: 7px;
+}
+
+.pl-0 {
+  padding-left: 0px !important;
+}
+
+.modalHeader-footer {
+  padding: 5px 15px !important;
+}
+
+.navbar-default {
+  background-color: #2373A3 !important;
+  border-color: #2373A3 !important;
+  border-radius: 0px !important;
+}
+.navbar-default .navbar-brand {
+  color: #fff !important;
+}
+
+.nowidgetData{
+  color: #d60000;
+}

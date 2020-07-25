@@ -1,0 +1,18 @@
+<div class="modal-header modalHeader-footer">
+    <h3 class="modal-title">{{headerText}}</h3>
+</div>
+
+<div class="modal-body">
+   <b> {{innerText}} </b>
+</div>
+
+<div class="modal-footer modalHeader-footer">
+    <ng-container ng-if="type === 'delete'">
+        <button class="btn btn-primary btn-sm" type="button" ng-click="yes()">YES</button>
+        <button class="btn btn-danger btn-sm" type="button" ng-click="cancel()" >NO</button>
+    </ng-container>
+    <ng-container ng-if="type !== 'delete'">
+        <button class="btn btn-primary btn-sm" type="button" ng-click="ok()">OK</button>
+    </ng-container>
+   
+</div>
