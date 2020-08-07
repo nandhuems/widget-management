@@ -2,11 +2,9 @@
   'use strict';
 function DetailComponentController($scope, $state, DetailService){
   var ctrl = this;
-  console.log(ctrl)
   ctrl.widgetDetailsList = [];
 
    this.$onInit = function () {
-     console.log(DetailService.getAllDetails());
      ctrl.widgetDetailsList =  DetailService.getAllDetails();
    };
 
