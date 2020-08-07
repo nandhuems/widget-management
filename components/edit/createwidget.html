@@ -1,20 +1,20 @@
 <div class="row">
-  <uib-alert ng-repeat="alert in alerts" dismiss-on-timeout="{{alert.dt}}" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+  <uib-alert ng-repeat="alert in $ctrl.alerts" dismiss-on-timeout="{{alert.dt}}" type="{{alert.type}}" close="$ctrl.closeAlert($index)">{{alert.msg}}</uib-alert>
     <div class="col-md-12">
-      <p class="borderwithText"> {{isEdit ? 'Edit' : 'Add'}} {{isEdit ? widgetDetail.name : 'Widgets'}}</p>
+      <p class="borderwithText"> {{$ctrl.isEdit ? 'Edit' : 'Add'}} {{$ctrl.isEdit ? $ctrl.widgetDetail.name : 'Widgets'}}</p>
       <div class="widget-main">
-        <form class="form-horizontal" name="widgetForm" ng-submit="submit()" novalidate>
+        <form class="form-horizontal" name="widgetForm" ng-submit="$ctrl.submit()" novalidate>
             <div class="form-group">
               <label class="control-label col-sm-2">Name:</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="Enter name" name="name" ng-model="widgetDetail.name" required>
+                <input type="text" class="form-control" placeholder="Enter name" name="name" ng-model="$ctrl.widgetDetail.name" required>
                 <!-- <p ng-show="widgetForm.name.$invalid && !widgetForm.name.$Dirty" class="help-block">Name is required.</p> -->
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-sm-2" for="pwd">Number:</label>
               <div class="col-sm-10">          
-                <input type="number" class="form-control" placeholder="Enter number" name="number" ng-model="widgetDetail.number" only-digits>
+                <input type="number" class="form-control" placeholder="Enter number" name="number" ng-model="$ctrl.widgetDetail.number" only-digits>
               </div>
             </div>
 
@@ -25,7 +25,7 @@
                     <table class="table editTable">
       
                         <tbody>
-                          <tr ng-repeat="pairs in widgetDetail.pairs">
+                          <tr ng-repeat="pairs in $ctrl.widgetDetail.pairs">
                             <td class="numberCol">
                               {{$index+1}}
                             </td>
@@ -36,8 +36,8 @@
                                 <input type="text" class="form-control" placeholder="Enter Value" name="value" ng-model="pairs.value" required>
                             </td>
                             <td class="text-right numberCol">
-                              <button type="button" class="btn btn-info btn-sm addBtn" ng-click="addKeyValu()" ng-show="$last">+</button>
-                              <button type="button" class="btn btn-danger btn-sm minBtn" ng-hide="widgetDetail.pairs.length === 1" ng-click="deletePairs($index)">-</button>
+                              <button type="button" class="btn btn-info btn-sm addBtn" ng-click="$ctrl.addKeyValu()" ng-show="$last">+</button>
+                              <button type="button" class="btn btn-danger btn-sm minBtn" ng-hide="$ctrl.widgetDetail.pairs.length === 1" ng-click="$ctrl.deletePairs($index)">-</button>
                             </td>
                           </tr>
                         </tbody>

@@ -1,4 +1,4 @@
-<p class="borderwithText">Widgets {{widgetDetail.name}} Details</p>
+<p class="borderwithText">Widgets {{$ctrl.widgetDetail.name}} Details</p>
 <div class="widget-main">
   <button type="button" class="btn btn-default btn-sm clsBtn" ui-sref="detail">X</button>
 
@@ -6,13 +6,13 @@
     <div class="form-group">
       <label class="control-label col-sm-4">Name:</label>
       <div class="col-sm-8 formLabelText">
-        <p>{{widgetDetail.name}}</p>
+        <p>{{$ctrl.widgetDetail.name}}</p>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-4" for="pwd">Number:</label>
       <div class="col-sm-8 formLabelText">
-        <span class="text-uppercase">{{widgetDetail.number | words}}</span>
+        <span class="text-uppercase">{{$ctrl.widgetDetail.number | words}}</span>
       </div>
     </div>
 
@@ -23,7 +23,7 @@
         <table class="table editTable mt-0">
 
           <tbody>
-            <tr ng-repeat="pairs in widgetDetail.pairs">
+            <tr ng-repeat="pairs in $ctrl.widgetDetail.pairs">
               <td class="pl-0">
                 {{$index+1}}.
               </td>
@@ -42,7 +42,7 @@
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10 text-right">
-        <button type="button" class="btn btn-warning btn-sm" ng-click="editWidget()">Edit</button>
+        <button type="button" class="btn btn-warning btn-sm" ng-click="$ctrl.editWidget()">Edit</button>
       </div>
     </div>
   </form>
